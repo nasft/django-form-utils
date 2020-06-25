@@ -2,6 +2,14 @@
 django-form-utils
 =================
 
+Why this fork?
+==============
+
+To continue to use the package after upgrading project to Django 1.11+
+
+What is this package?
+=====================
+
 This application provides utilities for enhancing Django's form handling:
 
     1. ``BetterForm`` and ``BetterModelForm`` classes, which are

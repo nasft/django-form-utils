@@ -489,7 +489,7 @@ class TemplatetagTests(TestCase):
         """
         form = BoringForm()
         tpl = template.Template('{% load form_utils %}{{ form|render }}')
-        html = tpl.render(template.Context({'form': form}))
+        html = tpl.render({'form': form})
         self.assertHTMLEqual(html, self.boring_form_html)
 
     betterform_html = (
@@ -523,7 +523,7 @@ class TemplatetagTests(TestCase):
         """
         form = ApplicationForm()
         tpl = template.Template('{% load form_utils %}{{ form|render }}')
-        html = tpl.render(template.Context({'form': form}))
+        html = tpl.render({'form': form})
         self.assertHTMLEqual(html, self.betterform_html)
 
 
